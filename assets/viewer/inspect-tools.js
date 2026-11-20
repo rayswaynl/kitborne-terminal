@@ -316,7 +316,7 @@ export class InspectTools {
     for (const [id, text, key] of [['wire', 'Wireframe', 'w'], ['normals', 'Vertex normals', 'v'], ['uv', 'UV checker', 'q'], ['bbox', 'Dimensions', 'b']]) button(id, text, () => this.toggle(id), key);
     const candidates = comparisonVersions(versions, current);
     if (compare && candidates.length) {
-      const select = doc.createElement('select'); select.setAttribute('aria-label', 'A/B-versie');
+      const select = doc.createElement('select'); select.setAttribute('aria-label', 'A/B version');
       for (const version of candidates) { const option = doc.createElement('option'); option.value = version.v; option.textContent = `v${version.v}`; select.append(option); }
       select.value = (candidates.find(v => comparing && v.v === comparison) || candidates.filter(v => v.v < current).at(-1) || candidates[0]).v;
       row.append(select);

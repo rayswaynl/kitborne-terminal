@@ -357,7 +357,7 @@ export function makeHome(X) {
       const sub = [it.project, stageLabel(it.stage) + ' · v' + it.v, files.length > 1 ? files.length + ' files' : null, it.since ? 'waiting ' + ago(it.since, true) : null];
       const flag = (c, n, one, many) => n ? el('span', { class: 'flag', style: { '--c': 'var(--' + c + ')' } }, n + ' ' + (n === 1 ? one : many)) : null;
       const flags = !ver ? [] : [flag('blue', (ver.resolves || []).length, 'point fixed?', 'points fixed?'), flag('red', (ver.lock_check || []).filter(c => c.result !== 'unchanged').length, 'locked spot changed', 'locked spots changed'),
-        flag('amber', files.flatMap(f => ((f.preflight || {}).warn) || []).length, 'waarschuwing', 'waarschuwingen')].filter(Boolean);
+        flag('amber', files.flatMap(f => ((f.preflight || {}).warn) || []).length, 'warning', 'warnings')].filter(Boolean);
       const key = qkey(it), picked = canPick() && S.qsel && S.qsel.has(key);
       const tick = canPick() ? el('label', { class: 'qpick', title: 'Select to approve in one go' }, el('input', { type: 'checkbox', checked: !!picked, 'aria-label': 'Select ' + nice(it.name || it.asset) + ' ' + stageLabel(it.stage) + ' v' + it.v, onchange: e => { S.qsel = S.qsel || new Map(); if (e.target.checked) S.qsel.set(key, it); else S.qsel.delete(key); X.renderInbox(); } })) : null;
       return el('div', { class: 'inrow qrow' + (picked ? ' picked' : '') }, tick, el('a', { class: 'inlink', href, onclick: e => { if (it.p === here && S.cat.assets[it.asset] && !(e.metaKey || e.ctrlKey || e.shiftKey)) { e.preventDefault(); open(it.p, it.asset, it.stage, it.v); } } },
