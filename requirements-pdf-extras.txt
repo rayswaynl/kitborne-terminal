@@ -1,0 +1,4 @@
+# Optional. Adds the PDF image resolution check (below 300 ppi) and the bleed coverage overlay.
+# PyMuPDF is AGPL-3.0 or commercial (Artifex). Without it both checks report "not checked";
+# page previews keep working through pypdfium2.
+PyMuPDF==1.27.2.3

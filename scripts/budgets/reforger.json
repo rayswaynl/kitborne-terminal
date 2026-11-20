@@ -1,0 +1,104 @@
+{
+  "profile": "reforger",
+  "editable_defaults": true,
+  "description": "EDITABLE DEFAULTS: per-asset starting points, not official platform limits. Tune for your renderer, device and scene. Bytes use binary units; thresholds are inclusive.",
+  "threshold_semantics": "value <= warn: ok; value <= over: warn; value > over: over; unknown: warn",
+  "metrics": {
+    "triangles": {
+      "warn": 75000,
+      "over": 150000
+    },
+    "vertices": {
+      "warn": 150000,
+      "over": 300000
+    },
+    "draw_calls": {
+      "warn": 50,
+      "over": 100
+    },
+    "materials": {
+      "warn": 20,
+      "over": 40
+    },
+    "textures": {
+      "warn": 30,
+      "over": 60
+    },
+    "texture_gpu_bytes": {
+      "warn": 134217728,
+      "over": 268435456
+    },
+    "npot_textures": {
+      "warn": 0,
+      "over": 4
+    },
+    "skin_joints": {
+      "warn": 128,
+      "over": 256
+    },
+    "max_influences": {
+      "warn": 4,
+      "over": 8
+    },
+    "max_morph_targets": {
+      "warn": 8,
+      "over": 16
+    },
+    "morph_targets": {
+      "warn": 32,
+      "over": 64
+    },
+    "animation_channels": {
+      "warn": 128,
+      "over": 256
+    },
+    "animation_keyframes": {
+      "warn": 50000,
+      "over": 100000
+    },
+    "animation_unique_keyframes": {
+      "warn": 50000,
+      "over": 100000
+    },
+    "animation_buffer_bytes": {
+      "warn": 16777216,
+      "over": 33554432
+    },
+    "geometry_buffer_bytes": {
+      "warn": 33554432,
+      "over": 67108864
+    },
+    "morph_buffer_bytes": {
+      "warn": 16777216,
+      "over": 33554432
+    },
+    "skin_buffer_bytes": {
+      "warn": 8388608,
+      "over": 16777216
+    },
+    "buffer_bytes": {
+      "warn": 67108864,
+      "over": 134217728
+    },
+    "meshes": {
+      "warn": 50,
+      "over": 100
+    },
+    "node_instances": {
+      "warn": 100,
+      "over": 200
+    },
+    "object_instances": {
+      "warn": 100,
+      "over": 200
+    },
+    "skins": {
+      "warn": 4,
+      "over": 8
+    },
+    "animations": {
+      "warn": 20,
+      "over": 40
+    }
+  }
+}

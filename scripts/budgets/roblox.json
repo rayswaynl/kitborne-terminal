@@ -1,0 +1,104 @@
+{
+  "profile": "roblox",
+  "editable_defaults": true,
+  "description": "LEGACY ADVISORY DIAGNOSTICS, NOT PLATFORM ACCEPTANCE: all flat thresholds below are owner hypothesis except max_influences, a computed ceiling from the official four-influence constraint. Named DD profiles: phone=compact, desktop=full; newly declared tablet=compact and console=full are owner hypotheses requiring explicit G0 targets; combinations use per-platform assignments and the declared common fallback. Other games use their own allocations. Pass only the selected whole-asset triangle ceiling through the documented budget_tris metadata; inspect other selected limits in the asset record. This unchanged flat schema does not implement automatic profile selection, per-mesh checks, runtime draws or device performance. Bytes use binary units; thresholds are inclusive.",
+  "threshold_semantics": "value <= warn: ok; value <= over: warn; value > over: over; unknown: warn",
+  "metrics": {
+    "triangles": {
+      "warn": 10000,
+      "over": 20000
+    },
+    "vertices": {
+      "warn": 20000,
+      "over": 40000
+    },
+    "draw_calls": {
+      "warn": 10,
+      "over": 20
+    },
+    "materials": {
+      "warn": 5,
+      "over": 10
+    },
+    "textures": {
+      "warn": 10,
+      "over": 20
+    },
+    "texture_gpu_bytes": {
+      "warn": 16777216,
+      "over": 33554432
+    },
+    "npot_textures": {
+      "warn": 0,
+      "over": 2
+    },
+    "skin_joints": {
+      "warn": 50,
+      "over": 100
+    },
+    "max_influences": {
+      "warn": 4,
+      "over": 4
+    },
+    "max_morph_targets": {
+      "warn": 0,
+      "over": 4
+    },
+    "morph_targets": {
+      "warn": 0,
+      "over": 8
+    },
+    "animation_channels": {
+      "warn": 32,
+      "over": 64
+    },
+    "animation_keyframes": {
+      "warn": 5000,
+      "over": 20000
+    },
+    "animation_unique_keyframes": {
+      "warn": 5000,
+      "over": 20000
+    },
+    "animation_buffer_bytes": {
+      "warn": 1048576,
+      "over": 4194304
+    },
+    "geometry_buffer_bytes": {
+      "warn": 4194304,
+      "over": 8388608
+    },
+    "morph_buffer_bytes": {
+      "warn": 1048576,
+      "over": 4194304
+    },
+    "skin_buffer_bytes": {
+      "warn": 1048576,
+      "over": 4194304
+    },
+    "buffer_bytes": {
+      "warn": 8388608,
+      "over": 16777216
+    },
+    "meshes": {
+      "warn": 10,
+      "over": 20
+    },
+    "node_instances": {
+      "warn": 20,
+      "over": 40
+    },
+    "object_instances": {
+      "warn": 20,
+      "over": 40
+    },
+    "skins": {
+      "warn": 1,
+      "over": 4
+    },
+    "animations": {
+      "warn": 5,
+      "over": 10
+    }
+  }
+}

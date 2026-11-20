@@ -1,0 +1,47 @@
+/* Kitborne Terminal tuner tab (tuner.js) */
+.tuner .tgrid{display:grid;grid-template-columns:minmax(300px,380px) minmax(0,1fr) minmax(260px,330px);gap:16px;align-items:start}
+.tuner .tcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-group);padding:14px 16px;margin-bottom:16px}
+.tuner .tcard h2{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 8px;font-size:16px;font-weight:900}
+.tuner .tcard h3{margin:14px 0 4px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);font-weight:800}
+.tuner .tcard h3:first-child{margin-top:0}
+.tuner .tpill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:800;background:var(--raise2);color:var(--muted)}
+.tuner .tpill.amber{background:rgba(255,181,71,.14);color:var(--amber)}
+.tuner .tlive{display:inline-block;margin-left:6px;padding:0 7px;border-radius:999px;font-size:11px;font-weight:800;background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent);vertical-align:1px}
+.tuner .tsl{margin:6px 0 12px}
+.tuner .tsl label{display:flex;justify-content:space-between;gap:8px;font-weight:700;font-size:14px}
+.tuner .tsl label b{font-variant-numeric:tabular-nums;white-space:nowrap}.tuner .tsl label b.diff{color:var(--amber)}
+.tuner .tsl label b small{color:var(--faint);font-weight:600}
+.tuner .tsl>small{display:block;color:var(--faint);font-size:12px}
+.tuner .ttrack{position:relative}
+.tuner .ttrack input{width:100%;accent-color:var(--accent);height:28px;margin:2px 0;cursor:pointer}
+.tuner .ttrack .tick{position:absolute;top:5px;width:2px;height:18px;margin-left:-1px;background:var(--faint);pointer-events:none;opacity:.8}
+.tuner .tscroll{overflow-x:auto}
+.tuner .ttable{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:14px}
+.tuner .ttable th,.tuner .ttable td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+.tuner .ttable th:first-child,.tuner .ttable td:first-child{text-align:left}
+.tuner .ttable th{color:var(--faint);font-size:12px;font-weight:800}.tuner .ttable td small{color:var(--faint)}
+.tuner .tdot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:0}
+.tuner .tdot.ok{background:var(--accent)}.tuner .tdot.bad{background:var(--red)}
+.tuner .tup{color:var(--accent);font-weight:800}.tuner .tdn{color:var(--red);font-weight:800}
+.tuner .tchk{margin:6px 0;font-size:14px}
+.tuner .tchart{width:100%;height:auto;display:block}
+.tuner .tchips{display:flex;gap:6px;flex-wrap:wrap;margin:2px 0 6px}
+.tuner .tchip{border:1px solid var(--line2);background:transparent;color:var(--muted);border-radius:999px;padding:4px 12px;font-weight:800;font-size:13px;cursor:pointer;min-height:32px}
+.tuner .tchip.on{border-color:var(--c);color:var(--c)}
+.tuner .tdiff{font:12.5px/1.5 Consolas,monospace;background:#0c0c0c;border:1px solid var(--line);border-radius:10px;padding:10px;overflow-x:auto}
+.tuner .tdiff div{display:flex;flex-direction:column;margin-bottom:4px;white-space:nowrap}
+.tuner .tminus{color:#c98a83}.tuner .tplus{color:var(--accent)}
+.tuner .tbtns{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.tuner .tbtns button{min-height:40px;border-radius:999px;padding:8px 16px;font-weight:800}
+.tuner .tsave{background:var(--accent);color:#111;border:0}.tuner .tsave:disabled{opacity:.4;cursor:default}
+.tuner kbd{border:1px solid var(--line2);border-radius:6px;padding:0 6px;font:inherit;font-weight:800}
+@media(max-width:1180px){.tuner .tgrid{grid-template-columns:minmax(280px,360px) minmax(0,1fr)}.tuner .tside{grid-column:1/-1}}
+@media(max-width:820px){.tuner .tgrid{grid-template-columns:minmax(0,1fr)}.tuner .ttable th,.tuner .ttable td{padding:7px 4px;font-size:13px}.tuner .ttable td small{display:none}}
+
+
+@media(min-width:821px){.tuner .tmid,.tuner .tside{position:sticky;top:16px;max-height:calc(100vh - 96px);overflow:auto;scrollbar-width:thin}}
+.tuner .tbar{display:none}
+@media(max-width:820px){.tuner{padding-bottom:84px}.tuner .tbar{display:flex;align-items:center;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--panel);border-top:1px solid var(--line2);box-shadow:0 -8px 18px rgba(0,0,0,.6)}
+.tuner .tbar .tsum{flex:1;font-size:13px;line-height:1.35;color:var(--muted)}.tuner .tbar .tsum b{color:var(--text)}.tuner .tbar .tsave{min-height:44px;border-radius:999px;padding:8px 16px;font-weight:800}}
+.tuner .tsl{margin:4px 0 10px}.tuner .ttrack input{height:24px}
+

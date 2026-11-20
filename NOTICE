@@ -1,0 +1,31 @@
+Kitborne Terminal
+Copyright 2026 Kitborne
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This product includes third-party software and fonts. Each component keeps
+its own licence; the full texts ship next to the component:
+
+- three.js 0.186.0 - Copyright (c) 2010-2026 three.js authors - MIT License
+  assets/viewer/vendor/three/LICENSE
+- meshoptimizer 1.3.0 - Copyright (c) 2016-2026 Arseny Kapoulkine - MIT License
+  assets/viewer/vendor/meshoptimizer/LICENSE.md
+- Draco decoder 1.5.6 (glTF build), distributed with three.js -
+  Copyright 2016 The Draco Authors - Apache License 2.0
+  assets/viewer/vendor/LICENSE-Draco.txt
+- Basis Universal transcoder 1.50.0, distributed with three.js -
+  Copyright (C) 2019-2024 Binomial LLC - Apache License 2.0
+  assets/viewer/vendor/LICENSE-Basis.txt
+  The transcoder includes the Zstandard decoder (zstddeclib.c) as WebAssembly -
+  Copyright (c) 2016-present, Facebook, Inc. - BSD 3-Clause License
+  assets/viewer/vendor/LICENSE-Basis-zstd.txt
+- ktx-parse, distributed with three.js - Copyright (c) 2020 Don McCurdy - MIT License
+  assets/viewer/vendor/three/addons/libs/LICENSE-ktx-parse.txt
+- zstddec 0.0.2, distributed with three.js - Copyright (c) 2020 Don McCurdy - MIT License;
+  includes the Zstandard decoder as WebAssembly - Copyright (c) 2016-present,
+  Yann Collet, Facebook, Inc. - BSD 3-Clause License
+  assets/viewer/vendor/three/addons/libs/LICENSE-zstddec.txt
+- Instrument Sans - Copyright 2022 The Instrument Sans Project Authors -
+  SIL Open Font License 1.1; assets/viewer/fonts/instrument-sans-OFL.txt
+- JetBrains Mono - Copyright 2020 The JetBrains Mono Project Authors -
+  SIL Open Font License 1.1; assets/viewer/fonts/jetbrains-mono-OFL.txt

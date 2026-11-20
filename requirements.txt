@@ -1,0 +1,5 @@
+numpy==2.4.2
+Pillow==13.0.0
+# PDF checks (pypdf) and PDF page previews (pypdfium2).
+pypdf==6.21.2
+pypdfium2==5.13.0
